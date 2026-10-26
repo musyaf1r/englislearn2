@@ -2,8 +2,6 @@ import { notFound } from "next/navigation";
 import { LessonRunner } from "@/components/LessonRunner";
 import { LESSONS } from "@/lib/content";
 
-export const dynamicParams = false;
-
 export function generateStaticParams() {
   return LESSONS.map((l) => ({ slug: l.slug }));
 }
